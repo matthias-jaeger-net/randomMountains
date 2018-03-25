@@ -10,14 +10,15 @@ function randomSplit(targ, pos, fac, w) {
 
    let segment = leng / fac;
 
-   let scl = w / 100;
+   let scl = w / 60;
 
    points.push(position.add(target));
+
    position = pos.copy();
 
-   for (let i = 1; i <= fac; i++) {
+   for (let i = 1; i < fac + 1; i++) {
       points[i] = position.add(unit.mult(segment * i));
-      if (i < fac-1) {
+      if (i < fac) {
          points[i].x += random(-scl, scl);
       }
       position = pos.copy();
