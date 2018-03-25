@@ -5,7 +5,10 @@ function mountain(layer) {
    w = floor(random(50, 50 + layer)) + layer;
    o = floor(random(-50, 50));
 
-   fill(layer + o / 2, 80, 60);
+   let bright = color(layer + o / 2, 80, 60);
+   let dark = color(layer + o / 2 + 10, 80, 60);
+
+   fill(bright);
    beginShape();
    vertex(0, 0);
    vertex(w, 0);
@@ -13,7 +16,7 @@ function mountain(layer) {
    vertex(w + o, -w);
    endShape(CLOSE);
 
-   fill(layer + o / 2 + 10, 80, 60);
+   fill(dark);
    translate(w, 0);
    beginShape();
    vertex(0, 0);
