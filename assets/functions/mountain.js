@@ -1,9 +1,13 @@
-function mountain(layer) {
+function Mountain(layer) {
+
+   let mx = 0;
+   let rx = random(-width, width);
+
    push();
    translate(0, height);
-   translate(random(-width, width), 0);
+   translate(rx, 0);
    w = floor(random(50, 50 + layer)) + layer;
-   o = floor(random(-50, 50));
+   o = 0 //floor(random(-50, 50));
 
    let bright = color(layer + o / 2, 80, 60);
    let dark = color(layer + o / 2 + 10, 80, 60);
@@ -25,4 +29,5 @@ function mountain(layer) {
    vertex(o * 2, -w/3);
    endShape(CLOSE);
    pop();
+
 }
