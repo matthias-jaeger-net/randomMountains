@@ -2,8 +2,18 @@
 
 function setup() {
    createCanvas(windowWidth, windowHeight);
-   background(255);
-   fill(0, 10);
+   var img = createImage(800, 800);
+   img.loadPixels();
+   for(x = 0; x < img.width; x++) {
+      for(y = 0; y < img.height; y++) {
+         a = map(y, 0, img.height, 255, 0);
+         img.set(x, y, [0, random(20, 80), a, random(20, 80)]);
+      }
+   }
+   img.updatePixels();
+   background(img);
+
+   fill(10, 0, random(100, 255), 20);
    noStroke();
 
    var lines = [];
