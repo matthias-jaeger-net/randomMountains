@@ -30,6 +30,8 @@ function setup() {
       noiseShape(lines[total][0], lines[total][1], random(100, 300), random(100, 200), random(0.02, 0.1));
    }
 
+   fill(0, 10);
+   noiseShape();
 }
 
 /*
