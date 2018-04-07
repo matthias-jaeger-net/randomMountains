@@ -9,9 +9,9 @@ function setup() {
    for(x = 0; x < img.width; x++) {
       for(y = 0; y < img.height; y++) {
          a = map(y, 0, img.height, 255, 0);
-         img.set(x, y, [a, random(20, 80), a, random(20, 80)]);
+         //img.set(x, y, [a, random(20, 80), a, random(20, 80)]);
          // A beautiful error
-         // img.set(x, y, [0, random(20, 80), a, random(20, 80)]);
+        img.set(x, y, [0, random(20, 80), a, random(20, 80)]);
       }
    }
    img.updatePixels();
@@ -19,6 +19,11 @@ function setup() {
 
    //fill(10, 0, random(100, 255), 20);
    noStroke();
+
+   var moonwidth = random(100, 900)
+   fill(255, 102);
+   ellipse(width/2+random(-0.5,0.5), height/4+random(-0.5,0.5), moonwidth, moonwidth);
+
 
    var lines = [];
    var total = 10;
@@ -38,16 +43,17 @@ function setup() {
 
 function draw() {
 
-   fill(100, 20, 100, 8);
-   var darstart = createVector(-100, random(0, height));
-   var darkend = createVector(width + 100, random(height/2, height));
-   noiseShape(darstart, darkend, 26, 100, random(0.03, 0.73));
+   if(frameCount < 100) {
+      fill(0, 5);
+      var darstart = createVector(-100, random(height/2, height));
+      var darkend = createVector(width + 100, random(height/2, height));
+      noiseShape(darstart, darkend, 26, 100, random(0.03, 0.73));
+
+   } else {
+      noLoop();
+   }
 
 
-   fill(0, 20, 40, 8);
-   var darstart = createVector(-100, random(height/2, height-100));
-   var darkend = createVector(width + 10, random(height/2, height));
-   noiseShape(darstart, darkend, 19, 900, random(0.1, 0.3));
 }
 
 /*
