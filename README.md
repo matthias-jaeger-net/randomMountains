@@ -1,21 +1,10 @@
 # randomMountains
-<<<<<<< HEAD
 Randomly colored generic mountain landscape.
-=======
-Randomly colored generic mountain landscape
->>>>>>> master
-
 
 ## Working example:
 https://matthias-jaeger-net.github.io/randomMountains/
 
 ## Screenshots
-<<<<<<< HEAD
-![randomMountains Random Spread](img/sample-1.png)
-![randomMountains Random Spread](img/sample-2.png)
-![randomMountains Random Spread](img/sample-3.png)
-![randomMountains Random Spread](img/sample-4.png)
-=======
 ![randomMountains](assets/img/sample-1.png)
 ![randomMountains](assets/img/sample-2.png)
 ![randomMountains](assets/img/sample-3.png)
@@ -35,7 +24,6 @@ https://matthias-jaeger-net.github.io/randomMountains/
 ![randomMountains](assets/img/sample-17.png)
 ![randomMountains](assets/img/sample-18.png)
 
->>>>>>> master
 
 ### Rendering with p5js:  
 http://p5js.org/
